@@ -1,5 +1,5 @@
 # 动态多目标优化算法实现 
-##1. Algorithms中包含以下算法
+## 1. Algorithms中包含以下算法
 * Tr-DMOEA <br>
   M. Jiang, Z. Huang, L. Qiu, W. Huang, and G. G. Yen, "Transfer Learning-Based Dynamic Multiobjective Optimization Algorithms," IEEE Transactions on Evolutionary Computation, vol. 22, no. 4, pp. 501-514, 2018, doi: 10.1109/TEVC.2017.2771451.
 * KT-DMOEA <br>
@@ -12,3 +12,8 @@
   Q. Lin, Y. Ye, L. Ma, M. Jiang, and K. C. Tan, "Dynamic Multiobjective Evolutionary Optimization via Knowledge Transfer and Maintenance," IEEE Transactions on Systems, Man, and Cybernetics: Systems, vol. 54, no. 2, pp. 936-949, 2024, doi: 10.1109/TSMC.2023.3322718.
 * DIP-DMOEA <br>
   Y. Ye, S. Liu, J. Zhou, Q. Lin, M. Jiang, and K. C. Tan, "Learning-Based Directional Improvement Prediction for Dynamic Multiobjective Optimization," IEEE Transactions on Evolutionary Computation, pp. 1-1, 2024, doi: 10.1109/TEVC.2024.3393151.
+## 2. 文件功能说明
+ "Algorithm": 包含所有的DMOEAs
+ "Benchmark": 包含CEC2018动态多目标优化问题的测试函数
+ "Metrics":  动态多目标优化算法的评估指标，例如IGD,HV等
+ "public": 执行程序所需要的公共文件。
