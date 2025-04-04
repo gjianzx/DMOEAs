@@ -19,12 +19,12 @@
  **"Metrics":**  动态多目标优化算法的评估指标，例如IGD,HV等。 <br>
  **"public":** 执行程序所需要的公共文件。 <br>
 ### 文件
-**"mian.m":** 执行程序的主函数。<br>
-**"configure.m":** 参数配置文件
-**"SelectAlgorithms.m"** 算法调用函数文件
-**"computeMetrics.m":** 计算评估指标文件
-**"dataOutput.m":** 数据输出处理文件
-**"dataProcess.m":** 数据处理成excel格式文件
-**"drawPlots.m":** 数据绘图文件
+**"mian.m":** 执行程序的主函数 <br>
+**"configure.m":** 参数配置文件 <br>
+**"SelectAlgorithms.m"** 算法调用函数文件 <br>
+**"computeMetrics.m":** 计算评估指标文件 <br>
+**"dataOutput.m":** 数据输出处理文件 <br>
+**"dataProcess.m":** 数据处理成excel格式文件 <br>
+**"drawPlots.m":** 数据绘图文件 <br>
 ## 3. 执行之前操作（重点）
 执行/Benchmark/CreatTrueDFPOF.m,获得测试函数的真实POF。
