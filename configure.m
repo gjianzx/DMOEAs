@@ -24,8 +24,6 @@ con.popSize=100;
 con.repeat=20;
 con.dec=10;  % 决策变量
 % con.alg={'Tr-DMOEA','KT-DMOEA','MMTL-DMOEA','IGP-DMOEA','DIP-DMOEA','KTM-DMOEA','DD-DMOEA'};  % 本次执行的算法
-con.Ab_alg={'DD-DMOEA-I','DD-DMOEA-II','DD-DMOEA-III'};
-con.Par_Sen_alg={'alpha-1','TimeStep-50','TimeStep-150','TimeStep-200','TimeStep-250','TimeStep-300'};
 con.alg={'DD-DMOEA'};  % 调式代码
 
 end
