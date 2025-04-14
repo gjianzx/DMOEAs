@@ -1,14 +1,14 @@
-% Ñ¡ÔñËùÒªÖ´ĞĞµÄËã·¨ %
+% é€‰æ‹©æ‰€è¦æ‰§è¡Œçš„ç®—æ³• %
 
 function Alg = SelectAlgorithms(Algname)
 switch Algname
-    case  'DD-DMOEA';       Alg  =  @DD_DMOEA; 
+    
         
     case  'DIP-DMOEA';      Alg  =  @DIP_DMOEA; 
-    case  'MMTL-DMOEA';     Alg  =  @MMTL_MOEAD;     % ´ËËã·¨µ¥¶ÀÖ´ĞĞ£¬moead²ÎÊıÉèÖÃ²»Í¬
+    case  'MMTL-DMOEA';     Alg  =  @MMTL_MOEAD;     % æ­¤ç®—æ³•å•ç‹¬æ‰§è¡Œï¼Œmoeadå‚æ•°è®¾ç½®ä¸åŒ
     case  'IGP-DMOEA';      Alg  =  @IGP_DMOEA;      
     case  'KTM-DMOEA';      Alg  =  @KTM_DMOEA;    
-    case  'KT-DMOEA';       Alg  =  @TrKneeDMOEA;    % ´ËËã·¨µ¥¶ÀÖ´ĞĞ£¬¼ÓÈëÈ«²¿Â·¾¶»á¿¨ËÀ
+    case  'KT-DMOEA';       Alg  =  @TrKneeDMOEA;    % æ­¤ç®—æ³•å•ç‹¬æ‰§è¡Œï¼ŒåŠ å…¥å…¨éƒ¨è·¯å¾„ä¼šå¡æ­»
     case  'Tr-DMOEA';       Alg  =  @Tr_DMOEA;
     
     case  'PPS';            Alg  =  @PPS;        
@@ -16,26 +16,6 @@ switch Algname
     case  'MIT-DMOEA';      Alg  =  @MITDMOEA;        
     case  'IT-DMOEA';       Alg  =  @ITDMOEA;  
     
-    %%% ÒÔÏÂÊÇDM-DMOEAÏûÈÚÊµÑé¡¢²ÎÊıÃô¸ĞĞÔÊµÑé¡¢ÏÖÊµÓ¦ÓÃÊµÑéËùĞèµÄº¯Êı %%%
-    case 'DD-DMOEA-I' ;       Alg  =  @AB_DD_DMOEA;
-    case 'DD-DMOEA-II';       Alg  =  @AB_DD_DMOEA;
-    case 'DD-DMOEA-III';      Alg  =  @AB_DD_DMOEA;
-        
-    case 'alpha-1';           Alg  =  @PS_DD_DMOEA;
-%     case 'alpha-2';           Alg  =  @PS_DM_DMOEA;
-    case 'TimeStep-50';       Alg  =  @PS_DD_DMOEA;
-    case 'TimeStep-150';      Alg  =  @PS_DD_DMOEA;
-    case 'TimeStep-200';      Alg  =  @PS_DD_DMOEA;
-    case 'TimeStep-250';      Alg  =  @PS_DD_DMOEA;
-    case 'TimeStep-300';      Alg  =  @PS_DD_DMOEA;
-    %%% Ó¦ÓÃ    
-    case  'APP-DD-DMOEA';       Alg  =  @APP_DD_DMOEA;         
-    case  'APP-DIP-DMOEA';      Alg  =  @APP_DIP_DMOEA; 
-    case  'APP-MMTL-DMOEA';     Alg  =  @APP_MMTL_MOEAD;     
-    case  'APP-IGP-DMOEA';      Alg  =  @APP_IGP_DMOEA;      
-    case  'APP-KTM-DMOEA';      Alg  =  @APP_KTM_DMOEA;    
-    case  'APP-KT-DMOEA';       Alg  =  @APP_TrKneeDMOEA;    
-    case  'APP-Tr-DMOEA';       Alg  =  @APP_Tr_DMOEA;    
 end
 end
 
