@@ -13,17 +13,11 @@ con=configure();
 functions=con.TestFunctions;
 T_parameter=con.T_parameter;
 % 设置算法类型
-Algorithm_Type = "Ablation experiment";    % 1 con.alg；2 con.Ab_alg； 3 con.Par_Sen_alg；
+Algorithm_Type = "Ablation experiment";    
 
 if Algorithm_Type == "Comparison experiment"
-   Algs = ["Tr-DMOEA","KT-DMOEA","MMTL-DMOEA","IGP-DMOEA","DIP-DMOEA","KTM-DMOEA","DD-DMOEA"];
+   Algs = ["Tr-DMOEA","KT-DMOEA","MMTL-DMOEA","IGP-DMOEA","DIP-DMOEA","KTM-DMOEA"];
    repeatMax=con.repeat;
-elseif Algorithm_Type == "Ablation experiment"
-   Algs = ["DD-DMOEA-I","DD-DMOEA-II","DD-DMOEA-III","DD-DMOEA"];
-   repeatMax=10;
-elseif Algorithm_Type == "Parameter sensitivity experiment"
-   Algs = ["alpha-1","TimeStep-50","DD-DMOEA","TimeStep-150","TimeStep-200","TimeStep-250","TimeStep-300"];
-   repeatMax=10;
 end
 IGD_Sign = zeros(3,length(Algs));  % 用于存储符号检验的+/=/-的数量
 HV_Sign = zeros(3,length(Algs));
@@ -48,9 +42,7 @@ for group=1:size(T_parameter,1)
        for algonum=1:size(Algs,2)    
            for rep=1:repeatMax
                if Algorithm_Type == "Comparison experiment"
-                  path = ['./Results/' Algs{algonum} '/rep_' num2str(rep) '/' char(Problem.Name) '/' char(group_con) '/'];
-               elseif Algorithm_Type == "Ablation experiment" || Algorithm_Type == "Parameter sensitivity experiment"
-                  path = ['./Results/Ablation/DD/' Algs{algonum} '/rep_' num2str(rep) '/' char(Problem.Name) '/' char(group_con) '/'];              
+                  path = ['./Results/' Algs{algonum} '/rep_' num2str(rep) '/' char(Problem.Name) '/' char(group_con) '/'];                       
                end 
                if ~isfolder(path) 
                     fprintf("The specified path %s does not exist!",path);
@@ -68,17 +60,6 @@ for group=1:size(T_parameter,1)
                HV_ALL(rep,:)=mean(every_hv);
                rt(rep,:)=sum(every_rt);        % 求解每次运行中30次环境变化的时间总和 （多个程序一起运行将影响时间的大小）
            end
-           if Algs(algonum) == "DD-DMOEA"  
-              sort_igd = sort(IGD_ALL);
-              sort_hv = sort(HV_ALL,'descend');
-              sort_rt = sort(rt);
-              Mean_IGD(testFuncNo,algonum)=mean(sort_igd(1:7));  % com:1:8  par/abl:1:7  
-              Std_IGD(testFuncNo,algonum)=std(sort_igd(1:10));
-              Mean_HV(testFuncNo,algonum)=mean(sort_hv(1:8));
-              Std_HV(testFuncNo,algonum)=std(sort_hv(1:10));
-%               runtime(testFuncNo,algonum)=mean(sort_rt(1:5));
-              runtime(testFuncNo,algonum)=mean(sort_rt(1:1));
-           else
               sort_igd = sort(IGD_ALL);
               sort_rt = sort(rt);
               Mean_IGD(testFuncNo,algonum)=mean(sort_igd(1:10));  % com:mean(IGD_ALL)  par/abl:mean(sort_igd(1:10))  mean(sort_igd(1:10))
@@ -86,7 +67,6 @@ for group=1:size(T_parameter,1)
               Mean_HV(testFuncNo,algonum)=mean(HV_ALL);
               Std_HV(testFuncNo,algonum)=std(HV_ALL);
               runtime(testFuncNo,algonum)=mean(sort_rt(1:1));
-           end
        end       
     end%testFun
     
