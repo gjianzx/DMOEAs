@@ -25,7 +25,5 @@
 **"SelectAlgorithms.m"** 算法调用函数文件 <br>
 **"computeMetrics.m":** 计算评估指标文件 <br>
 **"dataOutput.m":** 数据输出处理文件 <br>
-**"dataProcess.m":** 数据处理成excel格式文件 <br>
-**"drawPlots.m":** 数据绘图文件 <br>
 ## 3. 执行之前操作（重点）
 执行/Benchmark/CreatTrueDFPOF.m,获得测试函数的真实POF。
