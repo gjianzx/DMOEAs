@@ -1,5 +1,6 @@
 # 动态多目标优化算法框架 <br>
 ## 后续会不断更新相关算法，如有问题请通过本人邮箱进行联系！
+## 注意！由于部分算法有些冲突，本项目的算法建议一个一个执行。在执行前，请将“Algorithm“文件中对应的算法的所有文件添加到路径中。
 ## 1. Algorithms中包含以下算法
 * **Tr-DMOEA** <br>
   M. Jiang, Z. Huang, L. Qiu, W. Huang, and G. G. Yen, "Transfer Learning-Based Dynamic Multiobjective Optimization Algorithms," IEEE Transactions on Evolutionary Computation, vol. 22, no. 4, pp. 501-514, 2018, doi: 10.1109/TEVC.2017.2771451.
